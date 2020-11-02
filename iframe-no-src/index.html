@@ -1,1 +1,9 @@
-<div></div>
+<div>
+  <iframe id="foo"></iframe>
+</div>
+<script>
+  const iframe = document.getElementById("foo")
+  const html = '<b>ただの文字</b>';
+  const blob = new Blob([html], { type: 'text/html' });
+  iframe.src = URL.createObjectURL(blob);
+</script>
